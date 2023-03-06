@@ -1,0 +1,120 @@
+﻿3.04b
+Fixed Texture relevant Updates being only fired every 10 Ticks.
+Fixed Pump causing Block Updates when pumping Liquids.
+Fixed some other minor Bugs.
+Added a few more Basic Logic Modes for Bitwise Operators.
+Added Books to Creative Inventory
+
+3.04a
+Fixed a bunch of Sync Issues. Kane, you need to test it again for me. Sonictron in particular. Also test if the Covers are visible.
+Fixed a few unrecognized OreDictionary Tags.
+Added Comparator Recipe, which is working with any kind of Quartz.
+Added Liquid filling Functionality for the Autocrafting Table.
+
+3.03f
+Fixed Liquids.
+Added Recipes for RC Crushed Obsidian made from Thaumcraft Totems, and made the Pulverizer output crushed Obsidian (only 10% Dust instead of 25% of the normal Rock Crusher).
+
+3.03e
+Fixed a crapton of Bugs. Including those truncation Errors of Minecrafts Block Event Packets, what caused the Machine Extra Data to not being sent (wrong Facings etc.).
+Fixed Universal Macerator Recipes, which were accidently registered with 0% Secondary Output (0 was meaning "switch to default Rate" what is 10%).
+Universal Macerator now also works if neither TE nor RC are installed.
+Very likely "fixed" GUI Crash when clicking on an unloaded Machine, by try/catching ALL THE vanilla Container Functions. I didn't encounter any unloaded machine on the Server so I wasnt able to test it myself.
+
+3.03d
+Added Configuration Option to disable the UE-Energy-System, so that you dont have to delete Files.
+
+3.03c
+Fixed Stone->Quartz Glitch
+Added some Underground Biomes compatibility, but not that much.
+Fixed other minor Bugs
+
+3.03b
+Added Steam related Upgrades (2 Steam = 1 EU, but it doesnt convert the Steam, it has an internal Steam Tank in addition to the other Energy Storages)
+Added additional Modes to Valves, Conveyors and Drains, in order to make them controllable via Control Covers.
+Nerfed the speed of Drains.
+Added Universal Macerator. Works like a Pulverizer/RockCrusher/Macerator-Combo, and picks first the GregTech Recipe, which is supposed to be in the Pulverizer, then the regualr Pulverizer Recipe if that fails, and if both fail (or if it's Obsidian), then it takes the Rock Crusher Recipe. And if all that doesnt help, then it takes the regular Macerator Recipe. Can be crafted with any Maceration Device (so also the Pulverizer), together with a Grinding Head and some advanced Material.
+
+3.03a
+Added compatibility to some of the Underground Biomes Rocks in Crafting Recipes. (More to come later)
+Added a bunch of random but useful Books as Dungeon Loot.
+Made the BaseMetaTileEntity independent from the IC²-API, however their Recipes still require IC²-Stuff ofcourse, and it would also not make any sense aside from being immune (crashwise) to random API changes, which happened recently. I also encased everything what involves IC² (except the depricated Machines) inside a try/catch, to make sure other Updates don't break my Addon.
+Improved the Maths on UE-Energy Conversion to be even more precicely than UE itself (Integer-EU-Storage + a Double just for the decimals).
+Made Railcrafts Crowbar successfully compatible to my Cover System, by just registering it as a valid Cover removal Tool.
+
+3.02a
+Added internal UE-Converters to my MetaTileEntities. Due to Floatingpoint -> Integer Conversion it can be quite lossy, but the Conversion Rate is vanilla UE (what is apparently 1EU:40UE).
+Added Button Panel, with 16 Buttons. If you want to let the Buttons "Stuck" in their Position (instead of releasing all the time), then just add a Controller Cover to it.
+Added Redstone Noteblock. It is a special Noteblock, which can play all 6 Diffrent Note Sounds ("rotate" with Wrench to switch) in 15 diffrent pinches, depending on inputted Redstone Strength.
+Energy Flow Circuits are usable as "let only Energy through"-Covers
+Data Control Circuits are usable as "let only Redstone through"-Covers
+Computer Screens are usable as "let only Rightclicks go through"-Covers
+Added Randomizer Circuit to the Redstone Circuit Block. Perfect for making Music with the Redstone Noteblock btw.
+
+3.01c
+Fixed several things.
+Added Liquid and Item Meters as Covers.
+Added Solar Panel Cover. Yes you can place them on the Side too, but that is very retarded.
+Added Drain Cover, which can suck adjacent Liquid Blocks in.
+Added Item-Valve Cover for making transfer of Items, Liquids and Energy in one Line.
+Added Machine Box. It's just a Box, nothing else. Even if it makes special Effect Noises, when a certain Sponge is in it.
+
+3.01b
+Fixed Errors with the new Recipe System of IC². Please tell me if RichardG breaks it again, because due to his recent "change" I needed to hack into IC²-Source for proper Recipe overwriting (it was possible in the old API). And he wants others to add API's for his peripherals...
+Added Valve Cover, which is capable of automatically outputting/sucking Liquids into/outof adjacent Tanks. Wasnt able to test with Pipes or Liquiducts for obvious Reasons.
+Added Support for mistaqurs NEI-Plugins Recipe List.
+Changed again a ton of API Code for the better. It should be a bit more stable now in regards to changes.
+The Cover API got now Parameters (CoverSide, CoverID, CoverData and ICoverable implementing TileEntity) for every single Function, and the onCoverScrewdrive() Function for rightclicks with a GT-Screwdriver on the Cover.
+Fixed Casing Machines having "-xDir+1" instead of the proper "-xDir+i" inside the Code for checking the location of Machine Casings.
+
+3.01a
+Overhauled 60% of my Code, especially my API files.
+Added improved Cover System, and a few very useful Covers for controlling Machines via Redstone, emitting Redstone based on Progress, outputting Items (Conveyor), Redstone emitting EU-Meter and Efficiency improving Vent Covers.
+Added a few new Redstone Circuits to the Redstone Circuit Block, also added a try/catch inside the RS-Circuitblock to prevent any broken Circuit Code from crashing the TileEntity, what is very useful for testing.
+Made Crop Harvestor Overclockable.
+Fixed another crapton of Bugs.
+Added much more Interfaces to the API.
+Added API for Covers, and improved RS-Circuit-API.
+And many other things.
+
+3.00g
+Added a few more Cover Items, like Reactor Vents, Reactor Platings and Advanced Alloy. You can attach those directly at my Machines.
+Fixed many Crop Issues.
+The Sonictron has a new Active Texture.
+Added Textures for my Liquids/Gasses/Plasmas.
+
+3.00f
+Fixed Crops being Gamecrashing due to wrongly registered Textures (100% IC²s fault for not calling registerSprites).
+Added Crop Textures.
+Fixed other minor things.
+
+3.00e
+Added a few more Logic Behaviours, including a Combo Lock.
+Added The Cover System. Screwdriver = place special Covers on Machines, Crowbar = remove any Cover, Plates = place on Machine for usage as Cover (currently not all plates Supported).
+Added the BrainTech Agricultures Datachip Package. Currently without Textures, but that comes when I have split them.
+Added Version Check to the API Files, to prevent people fom doing bad Stuff by including it in their Download.
+
+3.00d
+Fixed a crapton of Bugs in my BaseMetaTileEntity regarding Redstone behaviour
+Added the Redstone Circuit Block. Currently not craftable, and the only thing it has is a very advanced Timer, which can blink even faster than its Redpower Counterpart. But as it does neither Sound nor Light it won't cause Lag.
+
+3.00c
+API is now a seperate Download.
+Moved tons of Code to the API/OpenSource thingy.
+
+3.00b
+Switched to the new and awesome vanilla ISided behaviour, and made full use of it!
+Advanced Regulators can now no longer overflow as they have a Slot-Filter, making LargeBuffer + Regulator + Machine combos possible.
+Hoppers of vanilla MC work perfectly with my Machines.
+You can now only output things from Output Slots and Input things to Input Slots, making the Side you pull of or put into irrelevant in most Cases. Ofcourse if you have secondary Inputs, then top/bottom = primary and sides = secondary.
+All my Automation Machines work now with the vanilla ISided, meaning that if Bugs with other Mods and automation occur, due to using the deprecated Forge ISided, it's their fault and not mine.
+
+3.00a
+Added tons of new API-Functions, which make my Addon Semi-Opensource.
+SteveOfDoom complained about not being replied to, so I did something with his Profile Pic.
+Playerdetector now outputting Redstone Signal depending on distance to one of the Players.
+Fixed a crapton of Bugs.
+Added Animations to some Machines. Will be continued later.
+Didn't add Textures for Liquid Type things.
+I forgot to mention that Item Clearers can now be Overclocked to increase their Range, and to make them better than Hoppers.
+Didn't check all the repaired Worldgen Code for 1.5.1, So its possible that some things can be missing.

@@ -1,0 +1,242 @@
+﻿3.11
+Fixed several Bugs.
+Added two Buttons to the Advanced Crafting Table, which are for flushing its Crafting Grid. The left one flushes Stuff into the 4x4, while the right one enables automation Output until the Crafting Grid got cleared (when attaching an Import Bus for example).
+Ninja Update - Fixed Tinkers Construct "Incompatibility" issue.
+
+3.10d
+Fixed some Bugs.
+Added Message to inform about the buggy IC² E-net, when using a too new Version. Could someone, who has already downloaded it, test that? I am not able to download the latest IC² for testing that.
+
+3.10c
+Fixed Liquid not being saved in some Machines, as the saveNBT Function got overwritten by Machine specific NBT Stuff, what caused the Liquid to not be saved.
+Added LV, MV and HV Solar Covers like the ones from Compact/Advanced Solars, but these are disabled per default.
+
+3.10b
+Fixed some things.
+Added Advanced Crafting Table. It has 16 Storage Slots, 5 Special recharging/liquidcontainer Slots, the 9 Crafting Slots, an Output Slot, and a Slot which is planned for plans, but you can use it as Side Slot as well. It has a Tank capacity of 64000 Liters, making it possible to do 64 Crafts without having to replace Buckets (Bog Earth for example). It is natively compatible with Medium Voltage, Tier 2 Tool Charging and also refills (both Liquid and EU) Tools in the 5 marked Slots.
+
+3.10a
+Added Gears and used them in Crafting Recipes for Hatches, as these were definitely too cheap. My Gears are crafted in a different Way than BC Gears, but they are compatible in OreDict Recipes where said Gears are needed.
+Added Metal Rods (and a Recipe for Iron Bars using them), they are all properly registered as "stickXYZ", where XYZ is their Material.
+Changed my Plate Bending Recipes for Railcraft Rails to use Metal Rods instead of Plates.
+Electric Tools can now be used in Crafting Recipes, which require Tools.
+Added File, which can make Rods from Ingots, and is also used to sharpen Tools Edges.
+Added Lathe, which makes Rods more efficiently Material wise (1 Ingot = 2 Rods OR 1 ingot = 1 Rod and 2 tiny Piles of Dust).
+Added Saw, which is needed to make 4 Planks from a Log, otherwise you get just 2 Planks (that got nerfed, yes, but there is a bunch of Configs for that)
+Added Advanced Drill, and made two Chainsaws, which can be used for Crafting Planks as well.
+The old IC²-Chainsaw is craftable by doing the Crafting Recipe upside down.
+Many Vanilla things now need Tools to be created. (A Config was added for that)
+Added Freezing Spray.
+
+3.09g
+Fixed End Worldgen Code. (The End world generation multiplied the coordinates of the chunks by 16 twice, causing it to generate 16 times farther away from the End, which was causing massive lag)
+Changed internals of the Recipe API (The Part where recipes are added). This should normally not affect any other Mod, unless reflection has been used wrongly.
+
+3.09f
+Added Modes to CFoam Spray.
+Fixed some Bugs.
+Added Functionality to Buffers, Sorters and some other Buffer alike Blocks, to output Items with a specified Stacksize, similar to the Advanced Regulator, but without Item Filter. Especially useful when having to output exactly 4 tiny Dusts into a Crafting Table or similar. To specify the Amount, click the Output Side with the Screwdriver.
+
+3.09e
+Fixed a major GT-Enet (special Code which works only between GT Machines to prevent Enet fails of IC² or Mekanism) Bug, which caused GT Machines which are adjacent to other GT Machines to overfill the Energy Storage. That didnt actually waste Energy, It just filled up Machines with tons of Energy, which is not monitored by any Scanner or something (overflown Energy is never dispalyed by anything, but it IS THERE).
+Added compatibility to CFoam Cables to both, the CFoam Spray and the CFoam Hardener.
+
+3.09d
+Added CFoam Spray, which doesnt punch you in the face when using it. The IC² CF Sprayer is slightly more efficient in Pellet Usage (26 Blocks per Pellet instead of 25), but this Spray doesn't spew anything around your clicked Block.
+Added Hardening Spray for hardening CFoam instantly like Sand does.
+Fixed typo in the Pepper Spray Tooltip.
+
+3.09c
+Added Pepperspray to the Dungeon Loot
+
+3.09b
+Added currently unobtainable Pepper Spray
+Fixed Output Hatches having their "Output Liquid" Condition inverted. (so it doesn't output Liquids, unless screwdrivered to not output Liquids)
+Improved damage handling to respect Container Items, in case the Item breaks on usage.
+Sprays can now paint Rockwool as well.
+Fixed Printer preferring the "1 Dye + 1 Item" option as soon as it goes under 8 Items, but could have the "1 Dye + 8 Items around it" option.
+Most Tooltips can be translated now.
+
+3.09a
+Added Spray Cans for Colors, Weedex and Hydration using Autocanning Machine. The Spray Cans need 16 Items of one Dye to color 64 Items via Craftingtable (an x4 Bonus), or, like the IC² Painter does, 512 Blocks in World (16 * 32 Blocks).
+The Printing Machine now accepts Container Item Dyes (Spray Cans) for it's Recipes, and outputs empty Containers to one of the two Slots.
+The Hydration Spray can also hydrate Coal Dust, but that has no real benefit in comparsion to Bucket Crafting regarding Water amount, it is just much more convenient to use it instead of a Bucket.
+Overhauled Worldgen Code massively. Sphalerite now spawns in very tiny amounts under Lava Lakes in the Overworld to enable Brass production without Nether. Due to the new Modular Worldgen Code I use for Overworld and Nether, it is now much more Configurable.
+Added Thermal Boiler. You need exactly two of these to power a Steam Turbine. They also output Obsidian when used with Lava, and even Ingots if they have the Lava Filter.
+Finally added the Recipe for "BrainTech Aerospace Advanced Reinforced Duct Tape FAL-84", which is used to fix all your Maintenance Problems in one click.
+Fixed Wrench Recipes for the use of Addons. These Recipes are just the normal Recipes but upside down, and should only be used, when a Mod gets the Idea to craft IC²-Tools together.
+Added tooeasy Config for people like Immibis, who can't get enough exploits.
+
+3.08g
+Added Tetrahedrite Ore and Cassiterite Ore to the Worldgen. They are both Biome dependant.
+
+3.08f
+Fixed Tool dupe by reparing exploit.
+Added Lithium based Recipe for ICBM Missile Modules, so that you don't need BC Fuel.
+
+3.08e
+Fixed Multiblock Updating Bug
+Fixed Animated Texture, by adding the forgotten animation File. (I wonder why it worked for me without that Animation File)
+Added Battery Alloy (not obtainable for now, due to lack of Antimony, but it will get useful soon) and made RE Battery Recipes require Plates (configurable)
+Fixed some Turbine Rotors being uncraftable.
+Added Info about the 3x3 of Air you need to have in front of a Turbine to the Book.
+
+3.08d
+Added Gas and Steam Turbine with all crafting Recipes and Functionality.
+Fixed several Bugs.
+
+3.08c
+Added testable Version of the Gas Turbine. Insert a Steam Turbine of Railcraft, as I didnt add any Turbine Items right now (next Version). It is not craftable, just there that you can learn about its Mechanics. The "Insert Chicken into Turbine" Feature has not been implemented either. You have probalby seen the Screenshot I posted a few Pages ago, it basically shows how to set up a Gas Turbine.
+
+3.08b
+Fixed another Server Issue.
+Added Plate Recipes using 2 Ingots and a Hammer.
+Changed several Recipes to use Plates instead of Ingots.
+Made the Bronze Casing (both Forestry and GT) be Tier 0 instead of 1, like Brass Casing.
+Still didnt finish all of the Multiblocks. I always get new Ideas, which basically have to be implemented for the first run.
+
+3.08a
+Added the unfinished Multiblock Devices.
+Added Metal Hammers, which do exactly the same Damage as their wrenchy Counterpart, including double Golem Damage.
+Metal Hammers are now switching the acceptability of Automation for Machines (what the Rubber Hammer did previously)
+Rubber Hammers are now used to make a Machine emitting strong Redstone Signals into the selected direction (direction selection like Wrenches). Strong = As if it was a Repeater facing into the adjacent Block on that specific Side. That is useful for Multiblock Structures where you cant put a Redstone Wire into spaces where Machine Casings are. Works ofcourse also for the Covers on said Side.
+Both Hammer Types are now capable of turning the vanilla Redstone Lamps ON/OFF by just rightclicking. It will create a Lamp, which will shut OFF when getting a Blockupdate. Turning a Lamp ON doesnt cause any Blockupdate.
+Fixed Autocrafting Table accepting Items with certain NBT Values.
+
+3.07i
+Fixed Induction Furnace Recipe.
+
+3.07h
+Fixed Iron Furnace not being registered at OreDict like I planned.
+Added functional but texture lacking Nether/End/Overworld Ore Textures
+
+3.07g
+Added "ready to process" Mode to the Cover which emits the Working State (useful for balancing items between Machines using AE Systems as that Cover doesnt block the Item flow).
+Added ability to use my Tools as Weapons to deal "some" damage. You will loose 3 durability per hit.
+Fixed my Tools being enchantable using Anvil.
+Fixed Charger Boxes being borked when using multiple electric Items with a large transfer limit.
+Changed the Recipes for the automatic Machines to now replacing directly the outputs of the IC² Recipes, so you don't need the Conveyor Module anymore. You can craft the automachines into regular ones if needed.
+Added a very cheap Rubber Hammer (stick + 6 Rubber like a Sign), which sets certain general Properties of Machines, like if the Machine accepts automation at all (useful for security of private Machines).
+
+3.07f
+Fixed Invocation in my API. I hate it when java thinks that a Class is absolutely necessary even though I call it's constructor inside a try/catch.
+
+3.07e
+Fixed several small Bugs.
+Added six new Omniwrenches, which work with IC², GT, BC, UE and vanilla Stuff.
+Iron Wrench with 100 Durability (you need 10 Durability to dismantle normal Machines)
+Bronze Wrench with 200 Durability (overrides the Recipe of the IC² Bronze Wrench)
+Steel Wrench with 500 Durability
+Tungstensteel Wrench with 5000 Durability
+Electric Wrench with 15 uses (overrides IC² E-Wrench)
+Advanced Wrench with 100 uses (needs Lithium Battery and Tungstensteel)
+
+3.07d
+Fixed "Air" Block related Stuff in my Machines (checks for isAirBlock now). That is especially for the invisible Blocks Railcraft adds, but also for the Wrath Lamps and similar devices.
+Added Teleporter. It can set the exact Target Coordinates. For interdimensional Travel you need to investigate a bit more. Also Interdimensional Travel currently has Problems with Chunk loading meaning Players have to relog after being Teleported into another Dimension. If you want it to teleport Players for free (Admins for example) rightclick it with the ultimate cheat Armor and add a Lock Upgrade if you dont want others to change it.
+Fixed several other Bugs.
+
+3.07c
+Added new revolutionary Wrenching behavior as explained on Page 666. No longer unbreakable Wrenches or wrongly implemented Interface usage, by just using a new Wrench registry! (And I talk about both, the IC² and the Omniwrench)
+Added Charger Box. This is a low Tier Battery Box alike Block, with the exception that you have to manually put the Batteries of your choice into it for being used. Guess what Transformer Upgrades do to it.
+Fixed several Bugs.
+
+3.07b
+Added Supercondensators to the MetaTileEntities
+Some Bugfixes.
+
+3.07a
+Fixed Tesseracts ignoring Covers on themselves (they have been letting Items and liquids go through no matter what).
+Added Block Update whenever Tesseract Terminals/generators switch from running to not running (so that TE Liquiducts work properly)
+Added newer MetaTileEntity Versions of AESU, IDSU and Lightning Rod.
+
+3.06d
+Fixed craptons of Bugs.
+Added some Assembling Recipes for things which are crafted from just 2 Components
+Changed Universal Macerator to prefer the Rock Crusher Recipe of Gravel.
+
+3.06c
+Added Lock upgrade to make Machines private and unpickaxeable (but not blast proof)
+Fixed Tesseracts working "way too good" when being broken, causing them to drop the contents of the attached Inventory.
+Fixed Energy Consumption of Tesseracts.
+Fixed Steam Upgrades on Tesseracts.
+Added Assembler Recipes for Tin Cans, Tin Cells and several other small things.
+Added Mixer Mode for the Autocrafting Table.
+Fixed Inventory Intelligence of Grinder, Blast Furnace and Chemical Reactor.
+Covers are now staying on the Machines when wrenched.
+
+3.06b
+Added Tesseract Support for GregTech Sensor Kits (if Nuclear Control is installed) and Digital Chests (Items now properly visible using AE through a Tesseract).
+Fixed Covers being placeable on certain Facings of certain Machines.
+Added Iridium Plate madefrom Iridium Ingot (it has the same Name, but its different!)
+Changed tungstensteel/Iridium Reinforced Blocks to require the Assembler.
+
+3.06a
+Added Tesseracts.
+Fixed clientside graphical disconnecting of Wires from my Machines.
+Added "Invert Cond" Mode to most Covers to work when the Controller Cover is set to not working.
+Added a few Magic Fuels.
+Improved Sided Energy connections.
+
+3.05g
+Added Recipes for Steelleaf, Liveroot and Ironwood, uncluding Recycling Recipes.
+Fixed Centrifuge not accepting Fuel Cans as automated Input.
+Fixed unwanted Stackability of my Crowbars and Screwdrivers.
+
+3.05f
+Fixed the whole Sortiment of Generators
+Added more Fuels for the Magic Energy Converter (Ars Magica related)
+Added Redstone Signalizer Cover, which just applies a constant Redstone Signal to a Side of the attached Machine. Its assembling Machine Recipe overloaded the Work Display Cover, which now uses Comparator instead of Redstone Torch to assemble it.
+Added Redstone Conductor Cover, which grabs the strongest incoming Redstone Signal of the Block and emits it.
+Fixed several other Bugs.
+Edit: Forgot to mention that Electrolyzer, Centrifuge and Implosion Compressor now have intelligent Filtering so that it no longer matters from where you input the Cells/ITNT. And yes, I forgot to check for empty Fuel Cans. Will be fixed next time.
+
+3.05e
+Fixed Wireless Exceptions due to Nullpointers from my Wireless Hashmap.
+Improved Wireless Covers by adding 5 Points where you can click them via Screwdriver to increase/decrease/justread the Frequency.
+Wireless Covers only set their Frequency to the handheld Item if you click the Middle of them (Screwdriver on Middle = just show Frequency)
+Added Config Options to turn STDOUT and STDERR off entirely. Warning, if you disable STDERR, then you will no longer be able to post Error Logs in case of a crash. This Option is only for the Case that any Mod spams the entire Log File until the Server crashes.
+Added a few Designs for the Compartment Block (use Screwdriver for changing it). They are just the Numbers 0-10 and a few commonly used Symbols, like a Wrench, a Hammer, a Rod or a Sword.
+
+3.05d
+Fixed the UE Energy Overflow mentioned above
+Disabled putting most Covers (Screen still allowed) on the Front Side of Basic Machines and the Button Panel.
+Disabled putting Covers on the front of Redstone Displays and Scales at all. (it wouldn't make sense to do that anyways)
+Redstone Displays, Scales and Button Panels can have diffrent Designs now. To switch Design just use the Screw Driver on the Front facing.
+
+3.05c
+Added Minotaur Axe Recycling to one Diamond Dust.
+Fixed Recyclers skipping Progress in 87.5% of the Cases due to Output being null.
+Added alternate Lead Plate Recipes for Radioactive Reactor Cells.
+
+3.05b
+Fixed the Cover Restoning.
+
+3.05a
+Added burn Value for those pesky wooden Doors which are accumulating in my Storages.
+Made Capelist no longer Case sensitive as MC isn't case sensitive.
+Fixed Wait Music Disc not being usable in my Recipes.
+Removed Version Check for Client/Server Connections, as everything should be compatible with older Servers, however it's YOUR risk if then something goes wrong while connecting with a more or a less updated Version. Servers shouldn't crash due to that, as there is no Client->Server communication from my Side.
+Removed a few unused Files, which were stuck in the zip.
+
+3.04f
+Added one new Redstone Scale Block. Others to come moreless soon.
+Fixed Transformer Upgrades inside Machines to emit 4 Packets like they were supposed to, instead of just one.
+Added Wireless Redstone in form of Covers.
+These Covers can supply Redstone either into a Machine or out of a Machine, depending on Mode (just craft it shapeless in the grid to switch Mode). The Wireless Redstone is very simple, and you might not want to have multiple Transmitters on the same Frequency, as that can be quite interrupting (one Transmitter overrides the signal of the other). It works interdimensional without Problems (you need to load the Chunks ofcourse). To switch Frequency just rightclick the Cover with an Item, and it will set the Frequency to the Itemspecific HashCode (over 2 billion Frequencies). The Screwdriver just adds 1024 to the already existing Frequency. Make sure that the Circuits you connect them to are protected against the 1 Tick long 0-Signal, which might occur on Server restart, not that your Nuclear Reactor blows up due to that. The Wireless Redstone works analog with all 16 stages of Redstone, so that you can connect Redstone Displays and similar to it (believe it or not, that is it's main purpose).
+
+3.04e
+Fixed Description Packets of MetaTileEntities being sent twice.
+Decreased amount of useless Client Updates
+Added Cauldron to the recycling Recipes.
+
+3.04d
+Updated the reserved MetaTile-ID List.
+Added the missing hook for Icon Registration to my MetaTileEntity API.
+Finally got around making an own Packet Handler for Main Data like ID and Covers.
+Added Implosion Compressor Recipe for Coal Chunks, however the old Compressor Recipe is still there, so you have to disable it yourself, using the incredibly complex Dynamic Config, which noobody understands.
+
+3.04c
+Fixed Playerdetector Cast (damn copypasting)
+Used srg-names to compile it
+Should be compatible with 1.5.2 now, if not then I don't care. #BlameMojang
